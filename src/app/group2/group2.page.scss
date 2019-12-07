@@ -1,0 +1,18 @@
+
+
+ion-buttons {
+  display: flex;
+  flex-direction: row;
+  // margin-left: 12px;
+  margin-bottom: 5px;
+
+}
+
+ion-buttons > ion-button {
+  width: 50%;
+  color: white;
+  background-color: #24d6ea;
+  justify-content: space-between;
+  border-radius: 5px;
+  height: 32px;
+}

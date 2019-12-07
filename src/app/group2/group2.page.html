@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>group2</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-slides pager="true" [options]="slideOpts" #slides>
+    <ion-slide>
+      <h1></h1>
+      <p>
+        I saw a werewolf with a Chinese menu in his hand.
+        Walking through the <ion-text color="danger"><sub>streets</sub></ion-text> of Soho in the rain.
+        He <ion-text color="primary"><i>was</i></ion-text> looking for a place called Lee Ho Fook's.
+        Gonna get a <ion-text color="secondary"><a>big dish of beef chow mein.</a></ion-text>
+        <ion-text color="danger">
+          <ion-icon name="cut"></ion-icon>
+        </ion-text>
+      </p>
+
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide 2</h1>
+
+      <p>
+        I saw a werewolf with a Chinese menu in his hand.
+        Walking through the <ion-text color="danger"><sub>streets</sub></ion-text> of Soho in the rain.
+        He <ion-text color="primary"><i>was</i></ion-text> looking for a place called Lee Ho Fook's.
+        Gonna get a <ion-text color="secondary"><a>big dish of beef chow mein.</a></ion-text>
+        <ion-text color="danger">
+          <ion-icon name="cut"></ion-icon>
+        </ion-text>
+      </p>
+    </ion-slide>
+    <ion-slide>
+      <h1>
+        <ion-img src="..//assets//item.png"> </ion-img>
+      </h1>
+      <p>
+        
+        <ion-chip [routerLink]="['/group3']" routerLinkActive="router-link-active" > go to group3 </ion-chip>
+      </p>
+    </ion-slide>
+  </ion-slides>
+
+
+
+</ion-content>
+
+<ion-footer class="ion-padding">
+<ion-buttons class="ion-buttons" >
+  <ion-button  [disabled]="isStart" (click)="prev()"> Previous </ion-button>
+  <ion-button   [disabled]="isEnd" (click)="next()"> Next </ion-button>
+</ion-buttons>
+</ion-footer>
