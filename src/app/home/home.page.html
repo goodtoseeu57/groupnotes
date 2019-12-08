@@ -6,10 +6,10 @@
     </ion-button>
 
     <ion-item lines="none">
-      <ion-label>Main group</ion-label>
+      <ion-label style="font-size: 25px;">Main group</ion-label>
     </ion-item>
     <ion-item *ngIf="showNotifications" slot="end" lines="none">
-      You have currently {{Notes.length}} notifications
+      You have currently {{Notes.length}} notes available
     </ion-item>
   </ion-toolbar>
 </ion-header>
@@ -20,7 +20,7 @@
 
 <ion-content class="ion-padding">
   <ion-item>
-    <ion-textarea placeholder="Enter new note" [(ngModel)]="newNote"> </ion-textarea>
+    <ion-input placeholder="Enter new note" [(ngModel)]="newNote"> </ion-input>
     <ion-icon name="add" color="success" (click)="addNote()"></ion-icon>
   </ion-item>
   <div *ngFor="let note of Notes; let i=index;">
@@ -39,8 +39,10 @@
 
 
 <ion-footer no-border>
-  <ion-button class="primary-button" [routerLink]="['/group1']" routerLinkActive="router-link-active" routerDirtection="forward">
-    See group 1
+  <ion-button *ngIf="showButton" class="primary-button"  (click)="dismiss()">
+    Close
   </ion-button>
+
+  <ion-button *ngIf="!showButton" class="primary-button" (click)="goGroup1()" > Go to group 1 </ion-button>
 </ion-footer>
 

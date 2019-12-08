@@ -1,59 +1,69 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>group2</ion-title>
+    <ion-title>Welcome to  Group2</ion-title>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen>
 
   <ion-slides pager="true" [options]="slideOpts" #slides>
     <ion-slide>
-      <h1></h1>
-      <p>
-        I saw a werewolf with a Chinese menu in his hand.
-        Walking through the <ion-text color="danger"><sub>streets</sub></ion-text> of Soho in the rain.
-        He <ion-text color="primary"><i>was</i></ion-text> looking for a place called Lee Ho Fook's.
-        Gonna get a <ion-text color="secondary"><a>big dish of beef chow mein.</a></ion-text>
-        <ion-text color="danger">
-          <ion-icon name="cut"></ion-icon>
-        </ion-text>
-      </p>
+      <ion-card>
+        <ion-img src="..//assets//meeting1.png"> </ion-img>
+        <ion-card-header>
+          <ion-card-subtitle> Meeting 1</ion-card-subtitle>
+          <ion-card-title> Meeting the John </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Tools like Calendly and Hubspot Meetings take scheduling to the next level. Instead of going back and forth about availability with your contacts,
+          you can send them a link to your public calendar so they can select a time that works best for them.
+        </ion-card-content>
+      </ion-card>
 
     </ion-slide>
     <ion-slide>
-      <h1>Slide 2</h1>
+      <ion-card>
+        <ion-img src="..//assets//meeting2.png"> </ion-img>
+        <ion-card-header>
+          <ion-card-subtitle> Meeting 1</ion-card-subtitle>
+          <ion-card-title> Meeting Jonathan </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Texting out your calendar link makes appointment scheduling even easier.
+          It helps you avoid the clutter of your prospect’s email inbox and get noticed in their text messaging inbox instead.
+        </ion-card-content>
+      </ion-card>
 
-      <p>
-        I saw a werewolf with a Chinese menu in his hand.
-        Walking through the <ion-text color="danger"><sub>streets</sub></ion-text> of Soho in the rain.
-        He <ion-text color="primary"><i>was</i></ion-text> looking for a place called Lee Ho Fook's.
-        Gonna get a <ion-text color="secondary"><a>big dish of beef chow mein.</a></ion-text>
-        <ion-text color="danger">
-          <ion-icon name="cut"></ion-icon>
-        </ion-text>
-      </p>
     </ion-slide>
-    <ion-slide>
-      <h1>
-        <ion-img src="..//assets//item.png"> </ion-img>
-      </h1>
-      <p>
-        
-        <ion-chip [routerLink]="['/group3']" routerLinkActive="router-link-active" > go to group3 </ion-chip>
-      </p>
+    <ion-slide class="slide3">
+      <ion-card>
+        <ion-img src="..//assets//meeting3.png"> </ion-img>
+        <ion-card-header>
+          <ion-card-subtitle>Meeting 3</ion-card-subtitle>
+          <ion-card-title> Meeting Ben </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          At conferences, trade shows, and other big meet-ups,
+          you’ll likely want to schedule a lot of meetings with a lot of contacts.
+          But you don’t want your outreach and other connections to seem generic.
+        </ion-card-content>
+      </ion-card>
+
+
+
     </ion-slide>
   </ion-slides>
-
 
 
 </ion-content>
 
 <ion-footer class="ion-padding">
-<ion-buttons class="ion-buttons" >
-  <ion-button  [disabled]="isStart" (click)="prev()"> Previous </ion-button>
-  <ion-button   [disabled]="isEnd" (click)="next()"> Next </ion-button>
+<ion-buttons >
+  <ion-button expand="block"  [disabled]="isStart" (click)="prev()"> Previous </ion-button>
+  <ion-button *ngIf="!isEnd" expand="block"  (click)="next()"> Next </ion-button>
+  <ion-button *ngIf="isEnd" expand="block" [routerLink]="['/group3']" routerLinkActive="router-link-active" > Finish </ion-button>
 </ion-buttons>
 </ion-footer>
