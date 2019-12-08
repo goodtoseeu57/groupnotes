@@ -8,11 +8,13 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import {Group4Page} from './group4/group4.page';
+
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  declarations: [AppComponent , Group4Page],
+  entryComponents: [Group4Page],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule ],
   providers: [
     StatusBar,
     SplashScreen,

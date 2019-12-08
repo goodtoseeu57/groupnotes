@@ -16,6 +16,10 @@ const routes: Routes = [
     path: 'group3',
     loadChildren: () => import('./group3/group3.module').then( m => m.Group3PageModule)
   },
+  {
+    path: 'group4',
+    loadChildren: () => import('./group4/group4.module').then( m => m.Group4PageModule)
+  },
 ];
 
 @NgModule({

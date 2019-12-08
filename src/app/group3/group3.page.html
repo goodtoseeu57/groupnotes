@@ -1,9 +1,17 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>group3</ion-title>
+    <ion-button slot="end" class="ion-button" (click)="presentPopover($event)"> show popover</ion-button>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+
+    <ion-searchbar showCancelButton="never"></ion-searchbar>
+
+    <ion-button expand="block" (click)="presentModal()"> show modal </ion-button>
 
 </ion-content>
+
+<!-- look at group 1 for ionic deep css-->
