@@ -6,7 +6,7 @@
   </ion-header>
   <ion-content>
     <ion-list>
-      <ion-item>
+      <ion-item [routerLink]="['/home']" routerDirection="root">
         <ion-icon name="home" slot="start"></ion-icon>
         <ion-label>Group 1</ion-label>
       </ion-item>
@@ -42,9 +42,8 @@
   </ion-toolbar>
 </ion-header>
 <ion-content class="ion-padding">
-  <ion-button class="menu-button"  expand="block" (click)="openMenu()">Open Menu</ion-button>
-  <ion-button expand="block" [routerLink]="['/group2']" routerLinkActive="router-link-active" > Show modal </ion-button>
-  <ion-button expand="block" (click)="goBack()"> Go back </ion-button>
+  <ion-button class="menu-button"  expand="block" (click)="openMenu()">Open Menu to navigate easier</ion-button>
+  <ion-button expand="block" [routerLink]="['/group2']" routerLinkActive="router-link-active" > Go to slides meeting </ion-button>
 
  </ion-content>
 

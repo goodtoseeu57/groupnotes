@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import {AlertController, MenuController} from '@ionic/angular';
+import { Component , Input } from '@angular/core';
+import {AlertController, MenuController, ModalController} from '@ionic/angular';
+import {Router} from '@angular/router';
 
 
 export interface Notes {
@@ -16,6 +17,7 @@ export interface Notes {
 export class HomePage {
   newNote: string;
   showNotifications = false;
+  @Input() showButton: boolean;
 
   Notes = [
     { text: 'Meeting Peter ', group: 'main-group', date: new Date() },
@@ -24,7 +26,8 @@ export class HomePage {
     { text: 'Meeting Raju ', group: 'main-group', date: new Date()}];
 
 
-  constructor(public alertCtrl: AlertController , public menu: MenuController ) {}
+  constructor(public alertCtrl: AlertController , public menu: MenuController , private router: Router,
+              private modalCtrl: ModalController) {}
 
   ionViewWillEnter() {
     console.table(this.Notes);
@@ -36,6 +39,9 @@ export class HomePage {
   openFirst() {
     this.menu.enable(true, 'first');
     this.menu.open('first');
+  }
+  dismiss() {
+    this.modalCtrl.dismiss().then(() => console.log(`has been dismissed`));
   }
 
   delete(index) {
@@ -65,6 +71,10 @@ export class HomePage {
       // you can update it directly
     });
     await alert.present();
+  }
+
+  goGroup1() {
+    this.router.navigateByUrl('group1').then((res) => console.table(res));
   }
 
 }

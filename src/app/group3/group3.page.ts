@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ModalController, PopoverController} from '@ionic/angular';
 import {Group4Page} from '../group4/group4.page';
-import {Group4PageModule} from '../group4/group4.module';
+import {HomePage} from '../home/home.page';
 
 @Component({
   selector: 'app-group3',
@@ -26,9 +26,16 @@ export class Group3Page implements OnInit {
 
   async presentModal() {
     const modal = await  this.modalCtrl.create({
-      component: Group4Page
+      component: HomePage,
+      componentProps: {
+        showButton: true,
+      }
     });
     return await modal.present();
   }
+  segmentChanged(ev: any) {
+    console.log(`segment changed ${ev.valueOf()}`);
+  }
+
 
 }

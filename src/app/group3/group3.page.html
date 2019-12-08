@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>group3</ion-title>
+    <ion-title>Group3</ion-title>
     <ion-button slot="end" class="ion-button" (click)="presentPopover($event)"> show popover</ion-button>
 
   </ion-toolbar>
@@ -10,7 +10,17 @@
 
     <ion-searchbar showCancelButton="never"></ion-searchbar>
 
-    <ion-button expand="block" (click)="presentModal()"> show modal </ion-button>
+    <ion-button expand="block" (click)="presentModal()"> Remember your available notes </ion-button>
+
+  <ion-segment (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="friends">
+      <ion-label>Friends</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="enemies">
+      <ion-label>Enemies</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
 
 </ion-content>
 

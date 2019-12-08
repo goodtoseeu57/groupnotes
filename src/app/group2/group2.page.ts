@@ -8,7 +8,7 @@ import {IonSlides} from '@ionic/angular';
 })
 export class Group2Page implements OnInit {
   slideOpts = {
-    initialSlide: 1,
+    initialSlide: 0,
     speed: 400,
     pager: false
   };
@@ -31,6 +31,7 @@ export class Group2Page implements OnInit {
 
       this.slides.isEnd().then((end) => {
         this.isEnd = end;
+
       });
 
 
