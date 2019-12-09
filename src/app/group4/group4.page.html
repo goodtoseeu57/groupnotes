@@ -1,28 +1,20 @@
 
 
-<ion-content class="ion-align-items-end">
-  <ion-list>
-    <ion-list-header>Ionic</ion-list-header>
-    <ion-item button>Learn Ionic</ion-item>
-    <ion-item button>Documentation</ion-item>
-    <ion-item button>Showcase</ion-item>
-    <ion-item button>GitHub Repo</ion-item>
+<ion-content class="ion-padding">
+  <ion-list lines="nones">
+    <ion-list-header> Your next meetings</ion-list-header>
+    <ion-item >Meet the Technical Director</ion-item>
+    <ion-item >Meet the Product Owner</ion-item>
   </ion-list>
 
-  <div class="ion-activatable">
-  A plain div with a bounded ripple effect , ripple effect this kind of animation
   <ion-ripple-effect></ion-ripple-effect>
-</div>
+  <p style="font-family: 'Gupter', serif; font-size: 18px;">
+    Choose the meeting location
+  </p>
 
   <ion-segment scrollable>
     <ion-segment-button>
       <ion-icon name="home"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button checked>
-      <ion-icon name="heart"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button>
-      <ion-icon name="pin"></ion-icon>
     </ion-segment-button>
     <ion-segment-button>
       <ion-icon name="star"></ion-icon>
@@ -30,13 +22,7 @@
     <ion-segment-button>
       <ion-icon name="call"></ion-icon>
     </ion-segment-button>
-    <ion-segment-button>
-      <ion-icon name="globe"></ion-icon>
-    </ion-segment-button>
-    <ion-segment-button>
-      <ion-icon name="basket"></ion-icon>
-    </ion-segment-button>
   </ion-segment>
-  <ion-button expand="block" (click)="dismissPopover()">Close pop over</ion-button>
-  <ion-button expand="block" (click)="dismissModal()"> Close modal</ion-button>
+  <ion-button expand="block" (click)="dismissPopover()">Close</ion-button>
+
 </ion-content>

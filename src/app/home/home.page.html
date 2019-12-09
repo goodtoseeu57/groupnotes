@@ -25,6 +25,9 @@
   </ion-item>
   <div *ngFor="let note of Notes; let i=index;">
     <ion-chip color="primary">
+      <ion-avatar>
+        <ion-img src="..//assets//meeting1.png"> </ion-img>
+      </ion-avatar>
       <ion-label>{{note.text}}</ion-label>
       <ion-label>
         <p>.. at {{ note.date | date: 'short'}} </p>

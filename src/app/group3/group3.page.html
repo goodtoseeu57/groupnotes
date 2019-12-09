@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Group3</ion-title>
-    <ion-button slot="end" class="ion-button" (click)="presentPopover($event)"> show popover</ion-button>
+    <ion-title style="text-align: left">Meeting's Group</ion-title>
+    <ion-button slot="end" class="ion-button" (click)="presentPopover($event)"> Next meetings</ion-button>
 
   </ion-toolbar>
 </ion-header>
@@ -10,8 +10,9 @@
 
     <ion-searchbar showCancelButton="never"></ion-searchbar>
 
-    <ion-button expand="block" (click)="presentModal()"> Remember your available notes </ion-button>
+    <ion-button class="button-modal" expand="block" (click)="presentModal()"> Remember your available notes </ion-button>
 
+<div *ngIf="something">
   <ion-segment (ionChange)="segmentChanged($event)">
     <ion-segment-button value="friends">
       <ion-label>Friends</ion-label>
@@ -20,7 +21,7 @@
       <ion-label>Enemies</ion-label>
     </ion-segment-button>
   </ion-segment>
-
+</div>
 
 </ion-content>
 
